@@ -6,8 +6,8 @@ import './App.css'
 function App() {
   return (
     <div className="app">
-      <Editor className="editor" />
       <Sidebar className="sidebar" />
+      <Editor className="editor" />
     </div>
   )
 }

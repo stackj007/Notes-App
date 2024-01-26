@@ -1,22 +1,23 @@
 .app {
   display: flex;
   height: 100vh; /* Full height of the viewport */
+  padding: 20px;
 }
 
 .editor {
   width: 70%;
+  padding: 20px;
+  box-sizing: border-box;
 }
 
 .sidebar {
   width: 30%;
+  padding: 20px;
+  box-sizing: border-box;
 }
+
 body,
 html {
   margin: 0;
   padding: 0;
-}
-
-.sidebar-Containe {
-  display: flex;
-  background-color: red;
 }
