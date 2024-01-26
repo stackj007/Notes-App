@@ -5,9 +5,13 @@ export default function Editor() {
   const [tab, setTab] = useState('write')
   const [text, setText] = useState('')
 
+  const handleInputChange = (event) => {
+    setText(event.target.value)
+  }
+
   return (
     <div className="editor">
-      <div className="Tabs">
+      <div className="tabs">
         <button
           className={tab === 'write' ? 'active' : ''}
           onClick={() => setTab('write')}
@@ -20,6 +24,15 @@ export default function Editor() {
         >
           preview
         </button>
+      </div>
+      <div className="body">
+        {tab === 'write' && (
+          <textarea
+            className="text-area"
+            value={text}
+            onChange={handleInputChange}
+          />
+        )}
       </div>
     </div>
   )
