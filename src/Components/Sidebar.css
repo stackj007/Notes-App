@@ -1,5 +1,7 @@
 .sidebarContainer {
   display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
 
   background-color: #fff;
@@ -9,13 +11,20 @@
   overflow: auto;
 }
 
-.sidebarContainer h1 {
+.sidebarContainer header {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  padding: 10px 30px; /* Adjust padding as needed */
+}
+
+.sidebarContainer header h1 {
   font-size: 1.75rem;
   margin-right: 20px;
   color: #333;
 }
 
-.sidebarContainer button {
+.sidebarContainer header button {
   background-color: #4caf50;
   color: white;
   border: none;
