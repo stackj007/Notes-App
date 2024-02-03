@@ -18,12 +18,17 @@ function App() {
   }
 
   const selectNote = (id) => {
-    selectedNoteId(id)
+    setSelectedNoteId(id)
   }
+
+  const findCurrentNote = notes.find(
+    (note) => note.id === selectedNoteId
+  )
 
   return (
     <div className="app">
       <Sidebar onAddNote={createNewNote} />
+
       <div className="noteList">
         {notes.map((note) => (
           <div
@@ -33,7 +38,8 @@ function App() {
           ></div>
         ))}
       </div>
-      <Editor />
+
+      <Editor note={findCurrentNote} />
     </div>
   )
 }

@@ -1,9 +1,19 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import ReactMarkdown from 'react-markdown'
 import './Editor.css'
-export default function Editor() {
+
+export default function Editor({ note }) {
   const [tab, setTab] = useState('write')
   const [text, setText] = useState('')
+
+  // Load the note content when the note changes
+  useEffect(() => {
+    if (note) {
+      setText(note.content)
+    } else {
+      setText('')
+    }
+  }, [note])
 
   const handleInputChange = (event) => {
     setText(event.target.value)
