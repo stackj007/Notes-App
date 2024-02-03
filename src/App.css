@@ -11,6 +11,7 @@ html {
   height: 100vh; /* Full height of the viewport */
   padding: 20px;
   background-color: #f5f5f5;
+  background-color: grey;
 }
 
 .editor {
